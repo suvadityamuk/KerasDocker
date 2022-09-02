@@ -24,8 +24,7 @@ WORKDIR /home/docker_runner/flask_app/keras-docker-trial
 RUN cd /home/docker_runner/flask_app/keras-docker-trial && pip install --no-cache-dir -r requirements.txt
 
 ENV PATH="${PATH}:/home/docker_runner/.local/bin"
-    
-# RUN gunicorn app:app --bind localhost:5000 --workers=4
+
 ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:5000", "--workers=4", "app:app"]
 
 EXPOSE 5000
