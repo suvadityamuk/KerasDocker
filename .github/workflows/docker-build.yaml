@@ -1,0 +1,19 @@
+name: Docker CI
+
+on:
+  push:
+  pull_request:
+    types: ['opened', 'reopened']
+
+env:
+  BUILD_CONFIGURATION: Release
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check-out the pushed code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build . -t keras-docker-trial --file Dockerfile
