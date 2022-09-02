@@ -1,4 +1,5 @@
 # Keras-Docker
+#### _A part of the blog "How to make models available to the Public"_
 
 ## Introduction
 
@@ -11,5 +12,5 @@ $ docker build . -t keras-docker-trial
 $ docker run -d --publish 5000:5000 keras-docker-trial
 ```
 
-The first line builds the Docker image using the Dockerfile
+The first line builds the Docker image using the Dockerfile  
 The second line uses the image to create a container according to the specifications and publish the port 5000 of the container to port 5000 of the local machine. 

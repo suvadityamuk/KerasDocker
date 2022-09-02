@@ -17,13 +17,11 @@ COPY --chown=docker_runner *.* /home/docker_runner/flask_app/keras-docker-trial/
 
 USER docker_runner
 
-RUN mkdir /home/docker_runner/data
-
 WORKDIR /home/docker_runner/flask_app/keras-docker-trial
 
-RUN cd /home/docker_runner/flask_app/keras-docker-trial && pip install --no-cache-dir -r requirements.txt
-
 ENV PATH="${PATH}:/home/docker_runner/.local/bin"
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:5000", "--workers=4", "app:app"]
 
