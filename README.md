@@ -1,6 +1,6 @@
 # Keras-Docker
 #### _A part of the blog - How to make models available to the Public_
-[Docker Image build CI](https://github.com/suvadityamuk/KerasDocker/actions/workflows/docker-build.yaml/badge.svg)
+![Docker Image build CI](https://github.com/suvadityamuk/KerasDocker/actions/workflows/docker-build.yaml/badge.svg)
 
 ## Introduction
 
